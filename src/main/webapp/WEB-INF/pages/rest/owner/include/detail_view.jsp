@@ -1,51 +1,41 @@
 <!-- detail -->
 <div class="container" id="catdetail" style="border:solid 1px #dddddd; border-radius:5px; margin-top:10px;">
+  <div ng-controller="restCtrl">
+	<div ng-repeat="r in rest"> 
         <div class="col-md-7">
-	        <section>
-			    <div ng-controller="restCtrl">
-			       <div ng-repeat="r in rest">
-			        <span ng-repeat="image in r.images">
-			        	<a class="example-image-link" href="{{image.url}}" 
-				      	data-lightbox="example-set">
-				      <img class="example-image" src="{{image.url}}" alt="" /></a>
-					</span>
-				     <!--  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" 
-				      data-lightbox="example-set">
-				      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
-				      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" 
-				      data-lightbox="example-set">
-				      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
-				      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" 
-				      data-lightbox="example-set">
-				      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a> -->
-				    </div>
-				 </div>
+	        <section>  
+			    <span ng-repeat="image in r.images | limit: 1">
+			       <a class="example-image-link" href="{{image.url}}" 
+				     data-lightbox="example-set">
+				    <img class="example-image" src="{{image.url}}" alt="" /></a>
+			  </span>
 			  </section>
-          </div>
-             
+          </div>  
           <div class="col-md-5">
               <h2 style="text-align: center;">Hello Detail</h2>
               <div class="table-responsive">
               <table class="table" style="border-top: 0px;">
               <tr>
                 <td>CompanyName: </td>
-                <td>Pizza Company: </td>
+                <td>{{r.name}}</td>
               </tr>
               <tr>
                 <td>Description: </td>
-                <td>This is a group of 4th generation scholarships. The purpose of this group is to organize all of students to getting the information from the Director, Deputy Manager, Admin and Instructors. The Information will announce here... please kindly check it ..</td>
+                <td>{{r.desc}}</td>
               </tr>
               <tr>
                 <td>Address</td>
-                <td> #12, St. 323, Sangkat Beoung Kat 2 Khan Toul Kork</td>
+                <td>{{r.home}},{{r.street}}</td>
               </tr>
               <tr>
                 <td>Contact</td>
-                <td> 098 990 282 </br>  070 213 470</td>
+                <td><span ng-repeat="t in r.tel">{{t.tel}}</span></td>
               </tr>
               </table>
               </div>
-          </div>        
+          </div>
+         </div>
+         </div>        
     </div> <!-- /container -->
     
 <div class="container">
