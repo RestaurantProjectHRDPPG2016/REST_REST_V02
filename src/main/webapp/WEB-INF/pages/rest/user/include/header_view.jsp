@@ -31,6 +31,7 @@
 				
 <!-- Menu -->				
 <link rel="stylesheet" type="text/css" href="resources/css/owner/menu.css">		
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 				
 <!-- Rany Scritpt -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -45,6 +46,11 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="resources/script/user/ui_main.js" type="text/javascript"></script>
 <script src="resources/script/owner/photo-gallery.js" type="text/javascript"></script>
+
+
+<!-- Popup -->
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 
 </head>
