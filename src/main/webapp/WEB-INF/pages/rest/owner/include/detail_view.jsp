@@ -2,15 +2,25 @@
 <div class="container" id="catdetail" style="border:solid 1px #dddddd; border-radius:5px; margin-top:10px;">
         <div class="col-md-7">
 	        <section>
-		    <div>
-		      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" >
-		      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt=""/></a>
-		      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" data-lightbox="example-set" >
-		      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
-		      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" >
-		      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
-		    </div>
-		  </section>
+			    <div ng-controller="restCtrl">
+			       <div ng-repeat="r in rest">
+			        <span ng-repeat="image in r.images">
+			        	<a class="example-image-link" href="{{image.url}}" 
+				      	data-lightbox="example-set">
+				      <img class="example-image" src="{{image.url}}" alt="" /></a>
+					</span>
+				     <!--  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" 
+				      data-lightbox="example-set">
+				      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
+				      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" 
+				      data-lightbox="example-set">
+				      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
+				      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" 
+				      data-lightbox="example-set">
+				      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a> -->
+				    </div>
+				 </div>
+			  </section>
           </div>
              
           <div class="col-md-5">

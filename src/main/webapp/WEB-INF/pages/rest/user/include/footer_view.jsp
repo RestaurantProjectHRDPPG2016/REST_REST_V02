@@ -72,7 +72,8 @@
 <script src="resources/static/js/angular.min.js" type="text/javascript"></script>
 <script src="resources/script/owner/detail.js" type="text/javascript"></script>
 <script src="resources/script/owner/lightbox-plus-jquery.min.js"></script>
-
+<script src="resources/script/owner/lightbox.min.js"></script>
+<script src="resources/script/owner/lightbox.js"></script>
 <!-- hello footer -->
 </body>
 </html>
