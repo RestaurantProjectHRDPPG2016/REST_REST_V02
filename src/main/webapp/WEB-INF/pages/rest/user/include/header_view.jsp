@@ -18,6 +18,7 @@
 <!-- My Styles -->
 <link rel="stylesheet" type="text/css"
 	href="resources/css/user/main.css">
+<!-- cdn -->	
 	
 <!-- Rany Style -->
 <link rel="stylesheet" type="text/css"
@@ -35,6 +36,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="resources/script/owner/category.js" type="text/javascript"></script>
 <script src="resources/script/owner/detail.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="resources/css/owner/lightbox.min.css">
 
 <!-- W3CSS -->
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">

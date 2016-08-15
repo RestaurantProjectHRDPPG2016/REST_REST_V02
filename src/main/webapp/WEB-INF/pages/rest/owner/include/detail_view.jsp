@@ -1,51 +1,16 @@
 <!-- detail -->
 <div class="container" id="catdetail" style="border:solid 1px #dddddd; border-radius:5px; margin-top:10px;">
         <div class="col-md-7">
-	        <div data-role="page">
-				  <div id="pageone" data-role="main" class="ui-content">
-				    <a href="#myPopup" data-rel="popup" data-position-to="window">
-				    <img src="resources/upload/playlist/img/1-1.png" alt="Skaret View" style="width:200px;"></a>
-				 <a href="#myPopup" data-rel="popup" data-position-to="window">
-				    <img src="resources/upload/playlist/img/1-1.png" alt="Skaret View" style="width:200px;"></a>
-				
-				<ul class="row mydetail">
-             		<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  		<img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                	</li>
-                </ul>
-				
-				    <div data-role="popup" id="myPopup">
-				      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-				      <img src="resources/upload/playlist/img/1-1.png" style="width:800px;height:400px;" alt="Skaret View">
-				    </div>
-				  </div>
-				</div>
-       <!--  <ul class="row mydetail">
-             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                  <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                  <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                  <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                  <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                  <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive" src="resources/upload/playlist/img/1-1.png">
-                </li>
-                <li class="col-lg-3 col-md-4 col-sm-3 col-xs-6" style="list-style: none;">
-                  <img class="img-responsive img-thumbnail" src="resources/upload/playlist/img/1-1.png">
-                </li>
-          </ul> -->
+	        <section>
+		    <div>
+		      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" >
+		      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt=""/></a>
+		      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" data-lightbox="example-set" >
+		      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
+		      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" >
+		      <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
+		    </div>
+		  </section>
           </div>
              
           <div class="col-md-5">
