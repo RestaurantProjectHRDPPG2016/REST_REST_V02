@@ -1,3 +1,4 @@
+<!-- detail -->
 <div class="container" id="catdetail" style="border:solid 1px #dddddd; border-radius:5px; margin-top:10px;">
         <div class="col-md-7">
 	        <div data-role="page">
