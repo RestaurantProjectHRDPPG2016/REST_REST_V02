@@ -40,5 +40,10 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<!-- W3CSS -->
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	
+	<script src="resources/static/js/jquery.bootpage.min.js" type="text/javascript"></script>
+	
+	
+	
 </head>
 <body>

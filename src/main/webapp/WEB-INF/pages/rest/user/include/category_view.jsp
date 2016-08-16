@@ -1,5 +1,6 @@
+
 <div class="container" id="img-cat">
-	<div class="row">
+	<div class="col-md-12">
 	<div ng-repeat="c in myCat">
 		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
 			<div class="default">
@@ -17,20 +18,7 @@
 		</div>
 		</div>
 	</div>
-</div>
-
-<div class="container">
-<div class="widht:300px;margin-left:auto;margin-right:auto;">
-<ul class="pagination">
-    <li class="disabled"><a href="#">&laquo;</a></li>
-    <li class="active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-     <li><a href="#">6</a></li>
-    <li><a href="#">&raquo;</a></li>
-</ul>
-</div>
+	<div id="pagination">
+	</div>
 </div>
 <!-- heloo -->

@@ -3,8 +3,8 @@
 	<div class="col-md-2 col-sm-2 col-xs-3" style="float:left">
 		<img class="img-responsive" style="padding:10px;" src="resources/upload/playlist/img/freshologo.png"/>
 	</div>
-		<div class="col-md-9 col-ms-10 col-xs-9">
-            <div class="input-group" id="adv-search">
+		<div class="col-md-9 col-sm-10 col-xs-9">
+            <div class="input-group col-md-5 col-sm-10 col-xs-9" id="adv-search">
                 <input type="text" class="form-control" placeholder="Search for Filings" />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">

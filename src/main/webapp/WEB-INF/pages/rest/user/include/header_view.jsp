@@ -47,6 +47,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="resources/script/user/ui_main.js" type="text/javascript"></script>
 <script src="resources/script/owner/photo-gallery.js" type="text/javascript"></script>
+<script src="resources/static/js/jquery.bootpage.min.js" type="text/javascript"></script>
 
 
 </head>

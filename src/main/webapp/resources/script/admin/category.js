@@ -3,21 +3,80 @@ var app = angular.module('myApp', []);
 
 app.controller('adminCtrl', function($scope, $http, $window, $rootScope){
 	
+
+	//TODO: define base url
+//	var BASE_URL = "http://localhost:";
+	
+	//TODO: declare user object
+	var MAINCATEGORY = {};
+	
+	//TODO: default filter
+	$scope.filter = {
+		page: 1,
+		limit: 18
+	};
+	
+	//TODO: 
+	$scope.paging = {};
+	
+	//TODO: 
+	var PAGINATION = angular.element('#pagination'); 
+	
+	//TODO: load Pagination
+	MAINCATEGORY.loadPagination = function(response){
+		
+		//TODO: Initialize pagination setting
+		$scope.paging = {
+			totalPages: response.Pagination.TOTAL_PAGES,
+			totalRecords: response.Pagination.TOTAL_COUNT,
+			currentPage: response.Pagination.PAGE,
+			limit: response.Pagination.LIMIT
+		};
+		//TODO:
+		PAGINATION.bootpag({
+	        total: $scope.paging.totalPages,
+	        page: $scope.paging.currentPage,
+	        leaps: true,
+	        firstLastUse: true,
+	        first: '←',
+	        last: '→',
+	        next: 'Next',
+	        prev: 'Prev',
+	        maxVisible: 18
+	    });	    
+	};
+	
+	//TODO: add listener to page click
+	PAGINATION.on("page", function(event, pageNumber){
+		$scope.filter.page = pageNumber;
+		MAINCATEGORY.selectCategory();
+	});
+	
+	
 	$scope.$watch('category', function(newValue){
 		$rootScope.subCategoryId = newValue;
 	});
 
-	$scope.selectCategory = function(){
+	MAINCATEGORY.selectCategory = function(){
 		$http({
-			url : 'http://localhost:8888/maincategory/',
+			url : 'http://localhost:8888/maincategory',
+			params: $scope.filter,
 			method : 'GET'
 		}).then(function(objcat){
 			$scope.myCat = objcat.data.DATA;
+			MAINCATEGORY.loadPagination(objcat.data);
 		}, function(response){
-			$scope.myCat = objcat.data;
+			alert("fail");
 		});
 	}
-	$scope.selectCategory();
+	
+	
+	//TODO: Reload data again
+	MAINCATEGORY.reload = function(filter){
+		$scope.filter = filter;
+		MAINCATEGORY.selectCategory();
+	};
+	MAINCATEGORY.selectCategory();
 	
 	$scope.deleteCategory = function(myid){
 		$http({
@@ -251,30 +310,88 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope){
 				alert('failed To call all data');
 			});
 		}
-
-		
-		
-		
 });
 
 /*Start Resturant Controller*/
 
 app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
+//Pagination
+	
 
+	//TODO: declare user object
+	var RESTAURANT = {};
+	
+	//TODO: default filter
+	$scope.filter = {
+		page: 1,
+		limit: 20
+	};
+	
+	//TODO: 
+	$scope.paging = {};
+	
+	//TODO: 
+	var PAGINATION = angular.element('#pagination'); 
+	
+	//TODO: load Pagination
+	RESTAURANT.loadPagination = function(response){
+		
+		//TODO: Initialize pagination setting
+		$scope.paging = {
+			totalPages: response.Pagination.TOTAL_PAGES,
+			totalRecords: response.Pagination.TOTAL_COUNT,
+			currentPage: response.Pagination.PAGE,
+			limit: response.Pagination.LIMIT
+		};
+		//TODO:
+		PAGINATION.bootpag({
+	        total: $scope.paging.totalPages,
+	        page: $scope.paging.currentPage,
+	        leaps: true,
+	        firstLastUse: true,
+	        first: '←',
+	        last: '→',
+	        next: 'Next',
+	        prev: 'Prev',
+	        maxVisible: 20
+	    });	    
+	};
+	
+	//TODO: add listener to page click
+	PAGINATION.on("page", function(event, pageNumber){
+		$scope.filter.page = pageNumber;
+		RESTAURANT.getRest();
+	});
+	
+	$scope.$watch('category', function(newValue){
+		$rootScope.subCategoryId = newValue;
+	});
+	
 	// GetALL
-	$scope.getRest = function(){
+	RESTAURANT.getRest = function(){
 		$http({
 			url: 'http://localhost:8888/restaurant',
+			params: $scope.filter,
 			method:'GET'
 		}).then(function(response){
+			console.log(response);
 			$scope.rest=response.data.DATA;
+			RESTAURANT.loadPagination(response.data);
 		}, function(response){
+			console.log(response);
 			alert('failed To call all data');
 		});
 	}
-	$scope.getRest();
 	
-	$scope.addRestaurant = function(){
+	//TODO: Reload data again
+	$scope.reload = function(filter){
+		$scope.filter = filter;
+		RESTAURANT.getRest();
+	};
+	
+	RESTAURANT.getRest();
+	
+	RESTAURANT.addRestaurant = function(){
 		alert("HEllo");
 		var frmData = new FormData();
 		var tel = $('input[name=tel]');
@@ -325,79 +442,3 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 });
 
 /*ENd Restuarant Controller*/
-
-/*Start Restaurant Type
-
-app.controller('restType', function ($scope, $http, $window){
-
-	// GetALL
-	$scope.getRestType = function(){
-		$http({
-			url: 'http://localhost:8888/resttype',
-			method:'GET'
-		}).then(function(response){
-			$scope.myrestType=response.data.DATA;
-			
-		}, function(response){
-			alert('failed rest type');
-		});
-	}
-	$scope.getRestType();
-	
-	$scope.addRestType = function(){
-		alert("HEllo Test Type");
-		$http({
-			url:'http://localhost:8888/resttype/',
-			method:'POST',
-			data:{
-				'name': $scope.name
-			}
-		}).then(function(response){
-			$scope.getRestType();
-	}, function(response){
-		alert('failed post resty type');
-	});
-	}
-	
-	$scope.deleteRestType = function(id){
-		$http({
-			url : 'http://localhost:8888/resttype/'+id,
-			method : 'DELETE'
-		}).then(function(objcat){
-			$scope.getRestType();
-		},function(response){
-			alert('failed delewer');
-		})
-	}
-	
-	$scope.changeRestType =function(mode){
-		if(mode==1){
-			$scope.name = "";
-		$("#add").show();
-		$("#update").hide();
-		}
-	};
-	
-	$scope.editRestType = function(t) {
-		$("#add").hide();
-		$("#update").show();
-		$scope.id = t.data;
-		$scope.name= t.data;
-	}
-	
-	$scope.updateRestType = function(){
-		$http({
-		url:'http://localhost:8888/resttype/',
-		method:'PUT',
-		data:{
-			'id' : $scope.id,
-			'name' : $scope.name
-		}
-		}).then(function(response){
-			$scope.getRestType();
-	}, function(response){
-		alert("fail put rest type");
-	});
-	}
-	alert("HEllo");
-});*/
