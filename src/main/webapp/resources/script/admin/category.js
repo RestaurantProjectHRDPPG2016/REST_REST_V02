@@ -230,46 +230,6 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope){
 
 
 	/*End Restaurant Type*/
-	
-	
-
-	/*
-	$scope.deleteCategory = function(myid){
-		$http({
-			url : 'http://localhost:8888/maincategory/'+myid,
-			method : 'DELETE'
-		}).then(function(objcat){
-			alert("Delete Success ");
-			$scope.selectCategory();
-		},function(response){
-			alert('failed delete main categoyr');
-		})
-	}
-	$scope.addCategory = function(){
-		var filename1 = $('#img1').val();
-		var filename2 = $('#img2').val();
-	    if (filename1.substring(3,11) == 'fakepath' )    { 
-	            filename1 = filename1.substring(12, filename1.length); 
-	        }
-	        if (filename2.substring(3,11) == 'fakepath' )    { 
-	            filename2 = filename2.substring(12, filename2.length); 
-	        }
-		$http({
-			url:'http://localhost:8888/maincategory/',
-			method:'POST',
-			data:{
-				'name': $scope.name,
-				't_id': $scope.t_id,
-				'img1': filename1,
-				'img2': filename2
-			}
-		}).then(function(response){
-			$scope.selectCategory();
-	}, function(response){
-		alert('failed to upload main category');
-	});
-	}
-*/
 		
 
 		// GetProvince
