@@ -284,7 +284,7 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 	//TODO: default filter
 	$scope.filter = {
 		page: 1,
-		limit: 20
+		limit: 10
 	};
 	
 	//TODO: 
@@ -313,7 +313,7 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 	        last: '→',
 	        next: 'Next',
 	        prev: 'Prev',
-	        maxVisible: 20
+	        maxVisible: 10
 	    });	    
 	};
 	

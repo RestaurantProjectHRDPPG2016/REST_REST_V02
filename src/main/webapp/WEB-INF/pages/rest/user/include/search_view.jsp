@@ -1,10 +1,10 @@
+
 <div class="container" id="search">
-	<div class="row">
-	<div class="col-md-2 col-sm-2 col-xs-3" style="float:left">
+<div class="col-md-2 col-sm-2 col-xs-3" style="float:left">
 		<img class="img-responsive" style="padding:10px;" src="resources/upload/playlist/img/freshologo.png"/>
 	</div>
-		<div class="col-md-9 col-sm-10 col-xs-9">
-            <div class="input-group col-md-5 col-sm-10 col-xs-9" id="adv-search">
+<div class="col-md-10">
+ <div class="input-group col-md-9 col-sm-9 col-xs-9" id="adv-search">
                 <input type="text" class="form-control" placeholder="Search for Filings" />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
@@ -47,14 +47,22 @@
                     </div>
                 </div>
             </div>
-          <div>
-          <div>
-          <br>
+  <div class="col-md-3" style="margin-top:-34px; float:right;">
+    
+ 
+    <div class="input-group add-on">
+      <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-map-marker"></i></button>
+      </div>
+    </div>
+
+  </div>
+  <br>
             Type of Restaurant: &nbsp <a ng-repeat="r in myrestType" class="resttype">{{r.name}}</a>
-		</div> 
-          </div>
-	</div>
+		
+  
 </div>
 </div>
-<!-- 
-HEllo -->
+
+
