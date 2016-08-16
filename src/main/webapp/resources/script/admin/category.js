@@ -425,8 +425,8 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 			});
 		}
 		$scope.getRestaurantByType();
-		
-}		*/
+		*/
+}	
 	
 	
 });

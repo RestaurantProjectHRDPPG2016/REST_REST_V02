@@ -1,4 +1,4 @@
-<!-- <div class="container" style="margin-top:10px;" ng-controller="restCtrl">
+<!--  <div class="container" style="margin-top:10px;" ng-controller="restCtrl">
 		<div class="row" id="myrow">
  			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 w3-card-4" id="each_menu" ng-repeat="r in rest"> 
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -22,5 +22,5 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
-</div>
+		</div> 
+</div> -->
