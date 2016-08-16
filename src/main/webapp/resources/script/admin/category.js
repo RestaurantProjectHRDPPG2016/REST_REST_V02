@@ -396,6 +396,36 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 			alert('failed to upload data! Please Try again Youra !!!!!');
 			$scope.getRest();
 		});
+		
+		
+//		getRestaurantByCategory(Cate ID)
+		$scope.getRestaurantByCategory= function(CateID){
+
+			$http({
+				url: 'http://localhost:8888/restaurant/category/'+CateID,
+				method:'GET'
+			}).then(function(response){
+				console.log(response);
+				$scope.categories=response.data.DATA;
+			}, function(response){
+				alert('failed to call Categories');
+			});
+		}	
+		$scope.getRestaurantByCategory(CateID);
+		
+//		getRestaurantByType(Type ID)
+		$scope.getRestaurantByType = function(typeID){
+			$http({
+				url: 'http://localhost:8888/restaurant/type/'+typeID,
+				method:'GET'
+			}).then(function(response){
+				$scope.restaurants=response.data.DATA;
+			}, function(response){
+				alert('failed To call all data');
+			});
+		}
+		$scope.getRestaurantByType();
+		
 }		
 	
 	
