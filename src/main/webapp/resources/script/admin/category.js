@@ -398,7 +398,7 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 		});
 		
 		
-//		getRestaurantByCategory(Cate ID)
+/*//		getRestaurantByCategory(Cate ID)
 		$scope.getRestaurantByCategory= function(CateID){
 
 			$http({
@@ -426,7 +426,7 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 		}
 		$scope.getRestaurantByType();
 		
-}		
+}		*/
 	
 	
 });
