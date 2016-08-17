@@ -10,7 +10,7 @@
 						</div>
 						<div class="col-md-8">
 							<div style="float:left;">
-								<a href="/detail{{this}}">
+								<a href="/detail">
 									<div><span  style="font-size:20px; font-weight: bolder;">{{r.name}}</span></div>
 									<div><span style="font-size:12px;">{{r.home}} St {{r.street}} {{r.commune}}</span></div>
 									<div><span style="font-size:12px;">{{r.district}} {{r.city}}</span></div>
