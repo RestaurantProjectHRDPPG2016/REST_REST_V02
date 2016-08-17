@@ -1,9 +1,10 @@
 @CHARSET "ISO-8859-1";
 
 .hlist{
-	margin-top: 30px;
+	margin-top: 2px;
 	background-color: white;
 	padding:0px;
+	margin-bottom:2px;
 }
 body{
 	background-color: #ffffff;
