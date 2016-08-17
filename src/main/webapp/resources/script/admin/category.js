@@ -428,19 +428,6 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 		*/
 }	
 	
-	RESTAURANT.findByID= function(myID){
-		$http({
-			url:'http://localhost:8888/restaurant/'+myID,
-			method:'GET'
-		}).then(function(findID){
-			$scope.myfindRest = findID.data.DATA;
-			alert($scope.myfindRest);
-		}, function(response){
-			alert("fail");
-		});
-		
-	}
-
 	
 });
 
