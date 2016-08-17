@@ -378,9 +378,9 @@ app.controller('restCtrl', function ($scope, $http, $window, $rootScope){
 		frmData.append('delivery', $scope.delivery);
 		frmData.append('home', $scope.home);
 		frmData.append('street', $scope.street);
-		frmData.append('province',$scope.province.id);
-		frmData.append('district', $scope.district.id);
-		frmData.append('commune', $scope.commune.id);
+		frmData.append('province',$scope.province.khmer_name);
+		frmData.append('district', $scope.district.khmer_name);
+		frmData.append('commune', $scope.commune.khmer_name);
 		
 		$http({
 			url:'http://localhost:8888/restaurant',
